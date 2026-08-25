@@ -70,7 +70,16 @@ Bu proje, kurumsal bir toptan satış platformu için geliştirilmiş modüler b
 
 ## Kurulum
 
-**1. Bağımlılıkları yükle ve ortam dosyasını hazırla**
+**1. Projeyi bilgisayarına indir**
+
+```bash
+git clone https://github.com/ibrahimhalilswe/b2b-siparis-stok.git
+cd b2b-siparis-stok
+```
+
+Git kurulu değilse, GitHub'daki repo sayfasında **"Code" → "Download ZIP"** seçeneğiyle de indirip klasöre çıkarabilirsin.
+
+**2. Bağımlılıkları yükle ve ortam dosyasını hazırla**
 
 ```bash
 composer install
@@ -78,7 +87,7 @@ copy .env.example .env
 php artisan key:generate
 ```
 
-**2. Veritabanı bağlantısını yapılandır**
+**3. Veritabanı bağlantısını yapılandır**
 
 `.env` dosyasında aşağıdaki değerleri kendi ortamına göre düzenle:
 
@@ -91,20 +100,20 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-**3. Veritabanını ve dosya depolama bağlantısını oluştur**
+**4. Veritabanını ve dosya depolama bağlantısını oluştur**
 
 ```bash
 php artisan migrate
 php artisan storage:link
 ```
 
-**4. Örnek verileri yükle**
+**5. Örnek verileri yükle**
 
 ```bash
 php artisan db:seed
 ```
 
-**5. Uygulamayı başlat**
+**6. Uygulamayı başlat**
 
 ```bash
 php artisan serve
